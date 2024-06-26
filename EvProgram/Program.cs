@@ -93,7 +93,7 @@ namespace EvProgram
                         ev.OdaSayisi = Convert.ToInt32(parts[0]);
                         ev.KatSayisi = Convert.ToInt32(parts[1]);
                         ev.Alan = Convert.ToDouble(parts[2]);
-                        ev.Semt = (parts[4]); // işe yaramadı // YARADI SONUNDA INDEX SAYILARINI DEĞİŞTİRDİM.
+                        ev.Semt = (parts[4]); 
 
                         if (ev is KiralikEv)
                         {
@@ -105,8 +105,7 @@ namespace EvProgram
                         else if (ev is SatilikEv)
                         {
                             SatilikEv satilikEv = ev as SatilikEv;
-                            satilikEv.EvFiyat = Convert.ToDouble(parts[6]); // Burada çözemediğim bir hata var. Kiralık ev kısmı sorunsuz çalışırken satılık evlerde kayıtlı evlerini göstermeye çalıştığımda exception atıyor. Index neden 6 olamıyor anlamadım. 6'dan küçük bir rakam girince kod çalışıyor fakat veriler düzgün olmuyor zira diğer indexler ile çakışıyor.
-                            // Bir ara her şey düzgün çalışıyordu. Bi şeyler yapıp bozdum. Kappa
+                            satilikEv.EvFiyat = Convert.ToDouble(parts[6]); 
                             evler.Add(ev);
                         }
                     }
